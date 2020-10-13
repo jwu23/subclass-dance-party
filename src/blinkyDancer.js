@@ -28,11 +28,6 @@
 var makeBlinkyDancer = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
 
-  // this.oldStep = makeDancer.prototype.step;
-  // console.log(this.oldStep);
-  // console.log('/', this.$node);
-  // this.oldStep();
-  // this.prototype.step();
   this.step();
 };
 
@@ -49,4 +44,7 @@ makeBlinkyDancer.prototype.step = function () {
   this.$node.toggle();
 };
 
-console.log(window);
+makeBlinkyDancer.prototype.lineUp = function() {
+
+  this.$node.css({top: 50});
+};

@@ -22,13 +22,17 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+  content: url('https://bravebrain.ro/wp-content/uploads/2016/06/owl2.png');
+  max-height: 50px;
+  border: 3px solid red;
+  border-radius: 10px;
+  position: absolute;
 }
 
 .spinningDancer{
-  border:20px solid blue;
+  content: url('https://upload.wikimedia.org/wikipedia/en/0/01/Golden_State_Warriors_logo.svg');
+  border:3px solid orange;
+  max-height: 50px;
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -36,10 +40,25 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+/* .spinningDancer:hover {
+  animation-play-state: paused;
+
+} */
 .bouncyDancer{
-  border:15px solid green;
+  content:url('https://bravebrain.ro/wp-content/uploads/2016/06/dog1.png');
+  max-height: 50px;
+  border:3px solid green;
   border-radius:15px;
   position:absolute;
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes bounce{
+  from { transform: translate3d(0, 0, 0);}
+  to { transform: translate3d(0, 25px, 0);}
 }
 
 @keyframes spin {

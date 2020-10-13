@@ -22,6 +22,8 @@ makeSpinningDancer.prototype.step = function () {
 
 };
 
-
+makeSpinningDancer.prototype.lineUp = function () {
+  this.$node.css({left: 100});
+}
 
 

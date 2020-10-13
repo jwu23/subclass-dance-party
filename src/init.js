@@ -36,6 +36,15 @@ $(document).ready(function () {
     );
     $('body').append(dancer.$node);
 
+    window.dancers.push(dancer);
   });
+
+  $('.addLineUpButton').on('click', function(event) {
+    console.log("hi", dancers)
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].lineUp()
+    }
+  });
+
 });
 
