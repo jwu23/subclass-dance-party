@@ -42,6 +42,7 @@ makeBlinkyDancer.prototype.step = function () {
   // makeDancer.step();
 
   this.$node.toggle();
+
 };
 
 makeBlinkyDancer.prototype.lineUp = function() {
