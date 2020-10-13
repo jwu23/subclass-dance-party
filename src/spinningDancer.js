@@ -1,8 +1,10 @@
 var makeSpinningDancer = function (top, left, timeBetweenSteps) {
-
+  // this.$node = $('<span class="spinningDancer"></span>');
+  console.log("top/left", top)
   makeDancer.call(this, top, left, timeBetweenSteps);
 
-  this.$node = $('<span class="spinningDancer"></span>');
+  this.$node.attr("class", "spinningDancer");
+
 
   this.step();
 

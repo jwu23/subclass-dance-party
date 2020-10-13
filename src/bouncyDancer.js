@@ -2,8 +2,8 @@ var makeBouncyDancer = function (top, left, timeBetweenSteps) {
 
   makeDancer.call(this, top, left, timeBetweenSteps);
 
-  this.$node = $('<span class="bouncyDancer"></span>');
-
+  this.$node.attr("class", "bouncyDancer");
+  
   this.step();
 };
 

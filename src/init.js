@@ -21,11 +21,12 @@ $(document).ready(function () {
     var dancerMakerFuncNameArr = dancerMakerFunctionName.split(' ');
 
     // access an index in dancerMakerFuncNameArr at random
-    var randomFuncName = dancerMakerFuncNameArr[Math.floor(Math.random() * 4)];
+    var randomFuncName = dancerMakerFuncNameArr[Math.floor(Math.random() * 3)];
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[randomFuncName];
 
+    console.log(dancerMakerFunction)
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
@@ -35,27 +36,6 @@ $(document).ready(function () {
     );
     $('body').append(dancer.$node);
 
-    // var spinningDancerFunctionName = $(this).data('makeSpinningDancer');
-    // console.log(spinningDancerFunctionName);
-    // var spinningDancerFunction = window[spinningDancerFunctionName];
-
-    // var spinningDancer = new spinningDancerFunction(
-    //   $('body').height() * Math.random(),
-    //   $('body').width() * Math.random(),
-    //   Math.random() * 1000
-    // );
-    // $('body').append(spinningDancer.$node);
-
-
-    // var bouncyDancerFunctionName = $(this).data('makeBouncyDancer');
-    // var bouncyDancerFunction = window[bouncyDancerFunctionName];
-
-    // var bouncyDancer = new bouncyDancerFunction(
-    //   $('body').height() * Math.random(),
-    //   $('body').width() * Math.random(),
-    //   Math.random() * 1000
-    // );
-    // $('body').append(bouncyDancer.$node);
   });
 });
 
