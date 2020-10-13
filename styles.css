@@ -3,6 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
+  background-image: url('https://d1lss44hh2trtw.cloudfront.net/assets/editorial/2018/03/thewavevr-htc-vive-warner-bros-ready-player-one-zero-g-club-vr-sxsw-2018-2.jpg');
   background-color:#444;
   font-size: 18px;
 }
@@ -28,7 +29,10 @@ body, a:link, a:visited, a:active{
 
 .spinningDancer{
   border:20px solid blue;
-  border-radius:20px;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
   position:absolute;
 }
 
@@ -36,4 +40,13 @@ body, a:link, a:visited, a:active{
   border:15px solid green;
   border-radius:15px;
   position:absolute;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }
